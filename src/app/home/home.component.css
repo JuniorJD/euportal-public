@@ -1,0 +1,30 @@
+.sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    width: 250px;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .banner {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .banner img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .banner p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #666;
+  }
+  
