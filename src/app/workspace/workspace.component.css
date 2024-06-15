@@ -1,0 +1,9 @@
+.workspace-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  mat-card {
+    margin: 10px;
+    padding: 10px;
+  }

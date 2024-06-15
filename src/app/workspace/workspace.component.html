@@ -1,12 +1,15 @@
-<div class="workspace">
-    <button mat-raised-button color="primary" (click)="fetchData()">Fetch Data</button>
-    <div *ngIf="data">
-      <mat-list>
-        <mat-list-item *ngFor="let item of data">
-          {{ item.title }} - {{ item.body }}
-        </mat-list-item>
-      </mat-list>
-      <p>{{ currentDate | date: 'full' }}</p>
-    </div>
+<div class="workspace-container">
+  <button mat-raised-button color="primary" (click)="fetchItems()">Fetch Items</button>
+
+  <div *ngIf="items.length > 0">
+    <h3>Data fetched at: {{ timestamp }}</h3>
+    <mat-list>
+      <mat-list-item *ngFor="let item of items">
+        <mat-card>
+          <mat-card-title>{{ item.title }}</mat-card-title>
+          <mat-card-content>{{ item.body }}</mat-card-content>
+        </mat-card>
+      </mat-list-item>
+    </mat-list>
   </div>
-  
+</div>

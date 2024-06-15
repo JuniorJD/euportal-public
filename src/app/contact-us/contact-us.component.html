@@ -1,49 +1,28 @@
-<div class="contact-us">
-    <h2>Contact Us</h2>
-    <form #plainForm="ngForm" (ngSubmit)="onSubmit(plainForm.value)">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" ngModel required pattern="[a-zA-Z ]*">
-      <div ngModelGroup="gender">
-        <label>
-          <input type="radio" name="gender" value="male" ngModel required>
-          Male
-        </label>
-        <label>
-          <input type="radio" name="gender" value="female" ngModel required>
-          Female
-        </label>
-      </div>
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone" ngModel required>
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" ngModel required>
-      <label for="message">Message</label>
-      <textarea id="message" name="message" ngModel required maxlength="500"></textarea>
-      <button type="submit" [disabled]="!plainForm.valid">Submit</button>
-    </form>
-  
-    <form #materialForm="ngForm" (ngSubmit)="onSubmit(materialForm.value)">
-      <mat-form-field>
-        <mat-label>Name</mat-label>
-        <input matInput type="text" name="name" ngModel required pattern="[a-zA-Z ]*">
-      </mat-form-field>
-      <mat-radio-group name="gender" ngModel required>
-        <mat-radio-button value="male">Male</mat-radio-button>
-        <mat-radio-button value="female">Female</mat-radio-button>
-      </mat-radio-group>
-      <mat-form-field>
-        <mat-label>Phone</mat-label>
-        <input matInput type="tel" name="phone" ngModel required>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Email</mat-label>
-        <input matInput type="email" name="email" ngModel required>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Message</mat-label>
-        <textarea matInput name="message" ngModel required maxlength="500"></textarea>
-      </mat-form-field>
-      <button mat-raised-button color="primary" type="submit" [disabled]="!materialForm.valid">Submit</button>
-    </form>
-  </div>
-  
+<form #contactForm="ngForm" (ngSubmit)="submitForm(contactForm.value)">
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Your Name" name="name" ngModel required>
+  </mat-form-field>
+
+  <mat-radio-group name="gender" ngModel required>
+    <mat-radio-button value="male">Male</mat-radio-button>
+    <mat-radio-button value="female">Female</mat-radio-button>
+  </mat-radio-group>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Phone</mat-label>
+    <input matInput placeholder="Your Phone" type="tel" name="phone" ngModel required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Your Email" type="email" name="email" ngModel required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Message</mat-label>
+    <textarea matInput placeholder="Your Message" name="message" ngModel required maxlength="500"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="!contactForm.valid">Submit</button>
+</form>
