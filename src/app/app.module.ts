@@ -8,11 +8,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
+import { LayoutComponent } from './layout/layout.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutes } from './app.routes';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    HttpClientModule,
+    RouterModule,
+    AppRoutes
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,20 @@
+
+  
+  .mat-sidenav {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Let the content determine the height */
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .mat-sidenav-content {
+    flex: auto; /* Take remaining space */
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mat-nav-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
