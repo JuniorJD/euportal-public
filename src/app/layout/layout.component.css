@@ -1,20 +1,35 @@
-
+.example-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .mat-sidenav-container {
+    display: flex;
+    height: 100%;
+  }
   
   .mat-sidenav {
-    width: 200px; /* Adjust width as needed */
-    height: auto; /* Let the content determine the height */
-    flex-direction: row;
-    align-items: center;
+    width: 200px;
+    background-color: rgb(82, 212, 255);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+  }
+  
+  .mat-nav-list {
+    width: 100%;
+  }
+  
+  .mat-nav-list a {
+    color: black; 
+    font-weight: bold;
+    text-align: center; 
   }
   
   .mat-sidenav-content {
-    flex: auto; /* Take remaining space */
-    flex-direction: column;
-    justify-content: center;
+    flex: 1; 
+    background-color: white; 
+    padding: 20px;
   }
-
-  .mat-nav-list {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  
